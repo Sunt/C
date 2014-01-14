@@ -1,0 +1,39 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <windows.h>
+
+int main(void){
+    
+    system("title Cronômetro");
+    
+    int sec = 0;
+    int min = 0;
+    int hor = 0;
+    
+    int i = 0;
+    
+    while (i < 10){
+          
+          system("color B");
+          printf("\n\t\t\t------------------------");
+          printf("\n\t\t\t\t%dh:%dm:%ds\n", hor,min,sec);
+          printf("\t\t\t------------------------  ");
+          Sleep(1000);
+          system("cls");
+          sec++;
+          
+          if(sec == 60){
+                sec=0;
+                min++;        
+          }
+          
+          if(min == 60){
+                min = 0;
+                hor++;        
+          }
+          
+          if(hor == 24){
+                hor = 0;      
+          }
+    }
+}
